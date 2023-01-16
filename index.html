@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Veggies</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+  </head>
+  <body>
+    <div id="loading">
+      <p>Welcome to my online store where you can buy fruits and vegetables with a click of a button</p>
+    </div>
+    <header>
+      <div id="logo-container">
+        <img src="https://images-platform.99static.com//pO_FDanM3xDHV2AXIz2RrjLx_bo=/6x0:1994x1988/fit-in/500x500/99designs-contests-attachments/99/99960/attachment_99960642" alt="Veggies logo">
+      </div>
+      <h1>Veggies</h1>
+      <nav>
+        <ul>
+          <li><a href="#" onclick="showSection('fruits')">Fruits</a></li>
+          <li><a href="#" onclick="showSection('veggies')">Vegetables</a></li>
+          <li><a href="#" onclick="showSection('about')">About</a></li>
+          <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="slideshow-container">
+      <div class="slideshow-image" id="slideshow-image-1">
+        <img src="https://post.healthline.com/wp-content/uploads/2020/08/fruits-and-vegetables-thumb.jpg" alt="image1">
+      </div>
+      <div class="slideshow-image" id="slideshow-image-2">
+        <img src="https://climate.copernicus.eu/sites/default/files/styles/hero_image_extra_large_2x/public/2018-07/globalagriculture.jpg?itok=fUmFHs6s" alt="image2">
+      </div>
+      <div class="slideshow-image" id="slideshow-image-3">
+        <img src="https://www.knowband.com/blog/wp-content/uploads/2017/11/Online-Purchase-Easier-for-your-Customers-750x300.png" alt="image3">
+      </div>
+      <div class="slideshow-image" id="slideshow-image-4">
+        <img src="https://www.gannett-cdn.com/presto/2020/04/10/USAT/2d441620-b2a6-41cf-af6f-2c41fd27c5b3-grocery-store-hero.jpg?width=660&height=372&fit=crop&format=pjpg&auto=webp" alt="image4">
+      </div>
+      <div class="slideshow-image" id="slideshow-image-5">
+        <img src="https://m.media-amazon.com/images/S/assets.wholefoodsmarket.com//content/92/0c/cdcf85e34b08b6ba5859c6736989/delivery-2hr-d._TTW_._CR636,111,2223,889_._SR2000,800_._QL100_.png" alt="image5">
+      </div>
+    </div>
+
+    <main>
+      
+      <section id="fruits">
+        <h2>Fruits</h2>
+        <ul>
+          <li onclick="showOrderForm(event, 'apple')"><img src="https://parade.com/.image/t_share/MTkwNTgxNDY1MzcxMTkxMTY0/different-types-of-apples-jpg.jpg" alt="Apple"></li>
+          <li onclick="showOrderForm(event, 'banana')"><img src="https://parade.com/.image/ar_4:3%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTkyNTIwNTg2NzMwMTUzNTA4/how-to-keep-bananas-fresh.jpg" alt="Banana"></li>
+          <li onclick="showOrderForm(event, 'orange')"><img src="https://www.bhg.com/thmb/8ql9jldzLGPruyLpmOWWWmR3UJQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/types-of-oranges-4d6a86c11fe14668ad798774e16697f8.jpg" alt="Orange"></li>
+        </ul>
+      </section>
+      <section id="veggies">
+        <h2>Veggies</h2>
+        <ul>
+          <li onclick="showOrderForm(event, 'carrot')"><img src="https://www.halfyourplate.ca/wp-content/uploads/2022/07/CarrotsWebsite.jpg" alt="Carrot"></li>
+          <li onclick="showOrderForm(event, 'broccoli')"><img src="https://cheflolaskitchen.com/wp-content/uploads/2022/06/Broccoli--500x375.jpg" alt="Broccoli"></li>
+          <li onclick="showOrderForm(event, 'spinach')"><img src="https://www.health.com/thmb/vlehi-KWIGaXmxou9sx3FadT4kk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/spinach-GettyImages-1135161567-1-2000-af5a3db960f7469faa7d281ae8769156.jpg" alt="Spinach"></li>
+        </ul>
+      </section>
+      
+
+      <div id="order-form" style="display: none;">
+        <span id="close-form" onclick="closeOrderForm()">&times;</span>
+        <table>
+          <tr>
+            <td>Product:</td>
+            <td id="product-name"></td>
+          </tr>
+          <tr>
+            <td>Quantity (kg):</td>
+            <td><input type="text" id="quantity"></td>
+          </tr>
+          <tr>
+            <td>Address:</td>
+            <td><input type="text" id="address"></td>
+          </tr>
+          <tr>
+            <td colspan="2"><input type="button" value="Submit" onclick="submitOrder()"></td>
+          </tr>
+        </table>
+       
+      </div>
+      <div id="order-confirmation" style="display: none;">
+        <p>Thank you for your order!</p>
+        <button id="close-confirmation">Close</button>
+      </div>
+
+      <section id="about">
+        <h2>About Us</h2>
+        <p>Veggies is an online store specializing in fresh fruits and vegetables. We work directly with local farmers to bring you the best produce available.</p>
+      </section>
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Phone: 555-555-5555</p>
+        <p>Email: info@veggies.com</p>
+      </section>
+    </main>
+    <footer>
+      <p>Copyright © Veggies</p>
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>
